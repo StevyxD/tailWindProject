@@ -1,0 +1,74 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: end;
+  height: 600px;
+  /* flex flow is like flex direction */
+  /* flex-wrap: wrap-reverse; */
+}
+.box {
+  height: 100px;
+  /* min-width: 100px; */
+  flex: 0 0 100px;
+  /* flex basis and min width are similar */
+}
+.one {
+  background-color: red;
+  /* flex-shrink: 3; */
+  /* flex-grow: 1; */
+  width: 500px;
+}
+.two {
+  background-color: blue;
+  /* flex-grow: 1; */
+  width: 500px;
+  /* flex-shrink: 2; */
+}
+.three {
+  background-color: green;
+  width: 500px;
+  /* flex-shrink: 1; */
+  /* flex-grow: 1; */
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* menu based styling */
+nav {
+  background: #333;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 10 px;
+  background-color: #777;
+}
+nav a:hover {
+  background: #555;
+}
+
+/* flex styles */
+@media screen and (min-width: 768px) {
+  nav ul {
+    display: flex;
+    justify-content: flex-start;
+  }
+  nav li {
+    flex: 1 1 0;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
